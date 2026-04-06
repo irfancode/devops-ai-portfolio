@@ -1,0 +1,47 @@
+groups:
+  - name: api_alerts
+    rules:
+      - alert: HighRequestLatency
+        expr: endpoint:http_request_duration_seconds:p95{endpoint="/orders"} > 0.5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High request latency on /orders endpoint"
+          description: "95th percentile latency is {{ $value }}s (threshold: 500ms)"
+
+      - alert: HighErrorRate
+        expr: job:http_errors:ratio5m > 0.01
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High HTTP error rate"
+          description: "Error rate is {{ $value | humanizePercentage }} (threshold: 1%)"
+
+      - alert: HighCPUUsage
+        expr: instance:node_cpu_utilisation:rate5m > 80
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage on {{ $labels.instance }}"
+          description: "CPU usage is {{ $value }}% (threshold: 80%)"
+
+      - alert: HighMemoryUsage
+        expr: instance:node_memory_utilisation:ratio > 85
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage on {{ $labels.instance }}"
+          description: "Memory usage is {{ $value }}% (threshold: 85%)"
+
+      - alert: APIEndpointDown
+        expr: up{job="api"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "API endpoint is down"
+          description: "{{ $labels.instance }} has been unreachable for 2 minutes"

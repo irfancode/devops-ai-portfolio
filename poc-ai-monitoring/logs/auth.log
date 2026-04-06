@@ -1,0 +1,15 @@
+2025-01-15 08:23:01 INFO Failed login attempt user=admin ip=192.168.1.100
+2025-01-15 08:23:05 INFO Failed login attempt user=root ip=10.0.0.55
+2025-01-15 08:24:12 INFO Failed login attempt user=admin ip=192.168.1.100
+2025-01-15 08:25:30 INFO Successful login user=deploy ip=10.0.1.20
+2025-01-15 08:26:45 INFO Failed login attempt user=test ip=172.16.0.10
+2025-01-15 08:27:01 INFO Failed login attempt user=admin ip=192.168.1.100
+2025-01-15 08:28:15 INFO Failed login attempt user=root ip=10.0.0.55
+2025-01-15 08:29:00 INFO Failed login attempt user=admin ip=203.0.113.42
+2025-01-15 08:30:22 INFO Successful login user=operator ip=10.0.1.25
+2025-01-15 08:31:10 INFO Failed login attempt user=guest ip=172.16.0.10
+2025-01-15 08:32:45 INFO Failed login attempt user=admin ip=192.168.1.100
+2025-01-15 08:33:01 INFO Failed login attempt user=root ip=10.0.0.55
+2025-01-15 08:34:18 INFO Failed login attempt user=admin ip=203.0.113.42
+2025-01-15 08:35:00 INFO Successful login user=admin ip=10.0.1.30
+2025-01-15 08:36:22 INFO Failed login attempt user=test ip=172.16.0.10

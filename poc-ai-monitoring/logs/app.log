@@ -1,0 +1,13 @@
+2025-01-15 08:23:01 INFO Request received endpoint=/orders method=GET
+2025-01-15 08:23:02 ERROR Database connection timeout endpoint=/orders
+2025-01-15 08:24:12 ERROR Failed to process request endpoint=/orders
+2025-01-15 08:25:30 INFO Request received endpoint=/health method=GET
+2025-01-15 08:26:45 ERROR Database connection timeout endpoint=/orders
+2025-01-15 08:27:01 CRITICAL Service unavailable endpoint=/orders
+2025-01-15 08:28:15 ERROR Failed to process request endpoint=/users
+2025-01-15 08:29:00 INFO Request received endpoint=/orders method=POST
+2025-01-15 08:30:22 ERROR Database connection timeout endpoint=/users
+2025-01-15 08:31:10 ERROR Failed to process request endpoint=/orders
+2025-01-15 08:32:45 CRITICAL Service unavailable endpoint=/orders
+2025-01-15 08:33:01 INFO Request received endpoint=/health method=GET
+2025-01-15 08:34:18 ERROR Database connection timeout endpoint=/orders
